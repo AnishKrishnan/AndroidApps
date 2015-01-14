@@ -1,0 +1,14 @@
+package com.example.csmobile;
+
+import android.widget.ArrayAdapter;
+
+public class CourseListAdapter extends ArrayAdapter<Courses> {
+	
+	private ArrayList<Courses> courseList;
+	
+	public CourseListAdapter(Context context, int textViewResourceId, ArrayList<Courses> courses){
+		super(context, textViewResourceId);
+		courseList = courses;
+	}
+
+}

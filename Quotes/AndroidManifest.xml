@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.krishapps.mynotes"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="17" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/quotation_marks"
+        android:label="@string/app_name"
+        android:theme="@style/MainTheme2" >
+        <activity
+            android:name="com.krishapps.mynotes.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.krishapps.mynotes.HeaderListFragment"
+            android:label="@string/title_activity_header_list_fragment" >
+        </activity>
+        <activity
+            android:name="com.krishapps.mynotes.QuoteView"
+            android:label="@string/title_activity_quote_view" >
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,4 @@
+INDEX VERSION 1.126+C:\Users\Anish\Documents\University\Compsci\COMPSCI 335\Assignment 1\.metadata\.plugins\org.eclipse.jdt.core
+257279487.index
+1297946525.index
+1292058606.index

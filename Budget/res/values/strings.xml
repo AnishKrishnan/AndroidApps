@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Budget</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="transaction_view_amount_label">Amount</string>
+    <string name="transaction_view_date_label">Date</string>
+    <string name="transaction_view_category_label">Category</string>
+    <string name="transaction_view_reason_label">Reason</string>
+    <string name="transaction_view_transaction_type_label">Type</string>
+    <string name="ok_botton">OK</string>
+    <string name="cancel_button">Cancel</string>
+    <string name="history_tab_id">History</string>
+
+</resources>

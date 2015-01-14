@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">My First App</string>
+    <string name="edit_message">Enter a message</string>
+    <string name="button_send">Send</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_display_message">My Message</string>
+    <string name="title_activity_article_fragment">ArticleFragment</string>
+    <string name="title_activity_activity_with_fragments">Activity With Fragments</string>
+    <string name="add_fragment">Add Fragment</string>
+    <string name="remove_fragment">Remove Fragment</string>
+
+</resources>

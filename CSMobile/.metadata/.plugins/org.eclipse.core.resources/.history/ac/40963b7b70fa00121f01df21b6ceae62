@@ -1,0 +1,56 @@
+import java.io.BufferedInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.MalformedURLException;
+import java.net.URL;
+
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.os.AsyncTask;
+
+    public class LoadCSBanner extends AsyncTask<String, Void, Bitmap> {
+
+    	
+    	@Override
+    	protected Bitmap doInBackground(String... arg0) {
+    		// TODO Auto-generated method stub
+    		return downloadBannerImage(arg0[0]);
+    	}
+
+    	private Bitmap downloadBannerImage(String url){
+    		
+    		try{
+    	    	URL csBannerURL = new URL(url);
+
+    	    	Bitmap bmp = null;
+
+	    		
+	    		InputStream inputStream = csBannerURL.openStream();
+	    		BufferedInputStream buff = new BufferedInputStream(inputStream);
+	        	bmp = BitmapFactory.decodeStream(buff);
+	        	
+	        	if(inputStream != null){
+	        		inputStream.close();
+	        	}
+	        	
+	        	if(buff != null){
+	        		buff.close();
+	        	}
+    	    	
+    	    	return bmp;
+    	
+    	    	
+    		}catch(MalformedURLException e){
+    			e.printStackTrace();
+    		}catch(IOException e){
+    			e.printStackTrace();
+    		}
+    	
+    		return null;
+    	}
+    	
+    	protected void onPostExecute(Bitmap bmp){
+    		setBannerImage(bmp);
+    	}
+
+    }

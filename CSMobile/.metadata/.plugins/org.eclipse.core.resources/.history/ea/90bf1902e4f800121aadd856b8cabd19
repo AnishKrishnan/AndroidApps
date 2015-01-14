@@ -1,0 +1,7 @@
+package com.example.csmobile;
+
+import android.os.AsyncTask;
+
+public class LoadCSBanner extends AsyncTask<String, Void, Bitmap> {
+
+}

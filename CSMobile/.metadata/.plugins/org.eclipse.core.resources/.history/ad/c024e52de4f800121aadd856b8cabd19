@@ -1,0 +1,48 @@
+package com.example.csmobile;
+
+import java.io.BufferedInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.os.AsyncTask;
+import android.widget.ImageView;
+
+public class LoadCSBanner extends AsyncTask<String, Void, Bitmap> {
+
+	@Override
+	protected Bitmap doInBackground(String... arg0) {
+		// TODO Auto-generated method stub
+		return downloadBannerImage(arg0[0]);
+	}
+	
+	private Bitmap downloadBannerImage(String url){
+		
+    	URL csBannerURL = new URL(url);
+    	
+    	HttpURLConnection httpConnection = (HttpURLConnection)csBannerURL.openConnection();
+    	httpConnection.setRequestMethod("GET");
+    	
+    	httpConnection.connect();
+    	
+    	if(httpConnection.getResponseCode() == HttpURLConnection.HTTP_OK){
+    		
+    		InputStream inputStream = httpConnection.getInputStream();
+    		BufferedInputStream buff = new BufferedInputStream(inputStream);
+        	Bitmap bmp = BitmapFactory.decodeStream(buff);
+
+    	}
+
+    	
+	}catch(MalformedURLException e){
+		e.printStackTrace();
+	}catch(IOException e){
+		e.printStackTrace();
+	}
+	}
+
+}

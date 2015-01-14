@@ -1,0 +1,14 @@
+package com.example.csmobile;
+
+import android.graphics.Bitmap;
+import android.os.AsyncTask;
+
+public class LoadCSBanner extends AsyncTask<String, Void, Bitmap> {
+
+	@Override
+	protected Bitmap doInBackground(String... arg0) {
+		// TODO Auto-generated method stub
+		return downloadBannerImage(arg0[0]);
+	}
+
+}

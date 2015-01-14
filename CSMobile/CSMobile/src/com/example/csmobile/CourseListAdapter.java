@@ -1,0 +1,44 @@
+package com.example.csmobile;
+
+import java.util.ArrayList;
+
+import android.content.Context;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.TextView;
+
+public class CourseListAdapter extends ArrayAdapter<Courses> {
+	
+	private ArrayList<Courses> courseList;
+	
+	public CourseListAdapter(Context context, int textViewResourceId, ArrayList<Courses> courses){
+		super(context, textViewResourceId);
+		courseList = courses;
+	}
+	
+	public View getView(int position, View convertView, ViewGroup parent){
+		
+		View v = convertView;
+		
+		if(v == null){
+			
+			LayoutInflater vi = (LayoutInflater) getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+			v = vi.inflate(R.layout.course_list_fragment, null);
+		}
+		
+		Courses course = courseList.get(position);
+		
+		TextView code = (TextView)v.findViewById(R.id.course_code);
+		TextView semester = (TextView)v.findViewById(R.id.course_semester);
+		TextView title = (TextView)v.findViewById(R.id.course_title);
+		
+		code.setText(course.getCodeField());
+		semester.setText(course.getSemesterField());
+		title.setText(course.getTitleField());
+		
+		return v;
+	}
+
+}

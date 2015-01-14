@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">CSMobile</string>
+    <string name="title_option_detail">Option Detail</string>
+    <string name="CS_Banner">Computer Science Banner</string>
+
+</resources>

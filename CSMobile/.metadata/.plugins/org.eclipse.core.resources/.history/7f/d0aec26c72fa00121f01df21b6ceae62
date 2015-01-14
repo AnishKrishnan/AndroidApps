@@ -1,0 +1,57 @@
+package com.example.csmobile.resources;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+/**
+ * Helper class for providing sample content for user interfaces created by
+ * Android template wizards.
+ * <p>
+ * TODO: Replace all uses of this class before publishing your app.
+ */
+public class Resources {
+
+    /**
+     * An array of sample (dummy) items.
+     */
+    public static List<Resource> ITEMS = new ArrayList<Resource>();
+
+    /**
+     * A map of sample (dummy) items, by ID.
+     */
+    public static Map<String, Resource> ITEM_MAP = new HashMap<String, Resource>();
+
+    static {
+        // Add 3 sample items.
+        addItem(new Resource("1", "Courses", "http://redsox.tcs.auckland.ac.nz/CSS/CSService.svc/courses"));
+        addItem(new Resource("2", "People", "www.google.co.nz"));
+        addItem(new Resource("3", "Events", "www.google.co.nz"));
+        addItem(new Resource("4", "Seminars", "www.google.co.nz"));
+    }
+
+    private static void addItem(Resource item) {
+        ITEMS.add(item);
+        ITEM_MAP.put(item.id, item);
+    }
+
+    /**
+     * A dummy item representing a piece of content.
+     */
+    public static class Resource {
+        public String id;
+        public String content;
+        public String URL;
+
+        public DummyItem(String id, String content, String URL) {
+            this.id = id;
+            this.content = content;
+        }
+
+        @Override
+        public String toString() {
+            return content;
+        }
+    }
+}

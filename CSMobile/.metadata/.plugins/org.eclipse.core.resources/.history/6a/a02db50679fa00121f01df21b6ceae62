@@ -1,0 +1,19 @@
+package com.example.csmobile;
+
+import java.util.ArrayList;
+
+import android.os.Bundle;
+import android.support.v4.app.ListFragment;
+
+public class CoursesList extends ListFragment {
+	
+	private ArrayList<Courses> courses;
+	
+	public void onCreate(Bundle savedInstanceState){
+		
+		super.onCreate(savedInstanceState);
+		
+		courses = new ArrayList<Courses>();
+	}
+
+}

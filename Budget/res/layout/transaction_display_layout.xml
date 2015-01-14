@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/transactionReason"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal" >
+
+    <TextView
+        android:id="@+id/trans_display_layout_reason"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/trans_display_layout_amount"
+        android:text="TextView"
+        android:textSize="@dimen/transaction_list_reason_text" />
+
+    <TextView
+        android:id="@+id/trans_display_layout_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center_vertical|center"
+        android:text="TextView"
+        android:textSize="@dimen/transaction_list_amount_text" />
+
+    <TextView
+        android:id="@+id/trans_display_layout_category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/trans_display_layout_reason"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/trans_display_layout_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/trans_display_layout_reason"
+        android:layout_below="@+id/trans_display_layout_reason"
+        android:ems="10"
+        android:text="TextView" />
+
+</RelativeLayout>
